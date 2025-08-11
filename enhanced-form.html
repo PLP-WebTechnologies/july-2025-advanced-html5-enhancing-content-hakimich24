@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enhanced Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+    }
+    header, section, footer {
+      margin-bottom: 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    form {
+      max-width: 600px;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Petcare Universe Registration</h1>
+    <p>Welcome to our community! Please fill out the form below to get started.</p>
+  </header>
+
+  <section>
+    <h2>Benefits of Joining</h2>
+    <ul>
+      <li>Access to exclusive pet care resources</li>
+      <li>Connect with local pet owners</li>
+      <li>Receive updates on pet health and events</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Pet Types We Support</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Pet Type</th>
+          <th>Common Needs</th>
+          <th>Recommended Products</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dogs</td>
+          <td>Exercise, grooming</td>
+          <td>Leashes, shampoo</td>
+        </tr>
+        <tr>
+          <td>Cats</td>
+          <td>Scratching posts, litter</td>
+          <td>Cat trees, litter boxes</td>
+        </tr>
+        <tr>
+          <td>Birds</td>
+          <td>Clean cages, toys</td>
+          <td>Perches, feeders</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Registration Form</h2>
+    <form action="/submit" method="post" autocomplete="on">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="+254712345678" pattern="^\+254\d{9}$" required>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="pet">Type of Pet:</label>
+      <select id="pet" name="pet" required>
+        <option value="">--Select--</option>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="bird">Bird</option>
+      </select>
+
+      <label for="bio">Short Bio:</label>
+      <textarea id="bio" name="bio" rows="4" placeholder="Tell us about your pet..." required></textarea>
+
+      <label for="referral">Referral Code:</label>
+      <input type="text" id="referral" name="referral" value="PETCARE2025" readonly>
+
+      <label>
+        <input type="checkbox" name="terms" required>
+        I agree to the terms and conditions
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Sample Video</h3>
+            <video controls preload="metadata">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Petcare Universe. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
